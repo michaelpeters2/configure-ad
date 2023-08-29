@@ -22,13 +22,17 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
+- Setup Resources in Azure
 - Step 2
 - Step 3
 - Step 4
 
 <h2>Deployment and Configuration Steps</h2>
 
+  1) Create the Domain Controller Virtual Machine (Windows Server 2022) named "DC-1"
+  - Take note of the Resource Group and Virtual Network (Vnet) that get created at this time.
+  2) Set Domain Controller’s NIC Private IP address to be static.
+  
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
