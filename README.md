@@ -26,6 +26,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Ensure Connectivity between the Client and Domain Controller
 - Install Active Directory
 - Create an Admin and Normal User Account in Active Directory
+- Join Client-1 to Your Domain
+- 
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -85,3 +87,12 @@ Install Active Directory
 ![image](https://github.com/michaelpeters2/configure-ad/assets/141062110/77e99e69-7cbd-41f0-85f4-985124b09d86)
 
   14) Add jane_admin to the “Domain Admins” Security Group
+  - Right click Jane Doe user and go to properties -> member of -> add domain admins
+  15) Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
+  16) User jane_admin as your admin account from now on
+![image](https://github.com/michaelpeters2/configure-ad/assets/141062110/97f79fdd-908c-4c6d-806d-f5bf74a2a766)
+
+Join Client-1 to Your Domain (mydomain.com)
+-
+  17) From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
+  18) 
