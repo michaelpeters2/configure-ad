@@ -27,7 +27,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Install Active Directory
 - Create an Admin and Normal User Account in Active Directory
 - Join Client-1 to Your Domain
-- 
+- Setup Remote Desktop for Non-Administrative Users on Client-1
+- Create Additional Users and Attempt to Log Into Client-1 With a User
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -95,4 +96,25 @@ Install Active Directory
 Join Client-1 to Your Domain (mydomain.com)
 -
   17) From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
-  18) 
+  18) From the Azure Portal, restart Client-1
+  19) Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
+  - Right click start -> system -> rename this PC -> change -> domain -> mydomain.com -> mydomain.com\Jane_Admin, Password1 (Log back in with this info)
+
+Setup Remote Desktop for Non-Administrative Users on Client-1
+-
+  20) Log into Client-1 as mydomain.com\jane_admin and open system properties
+  21) Click “Remote Desktop”
+  22) Allow “domain users” access to remote desktop
+  23) You can now log into Client-1 as a normal, non-administrative user now
+
+Create Additional Users and Attempt to Log Into Client-1 With a User
+-
+  24) Login to DC-1 as jane_admin
+  25) Open PowerShell_ise as an administrator
+  26) Create a new File and paste the contents of the script into it (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+  27) Run the script and observe the accounts being created.
+  28) When finished, open ADUC and observe the accounts in the appropriate OU.
+  29) Attempt to log into Client-1 with one of the accounts (take note of the password in the script)
+  30) Finish!
+
+Congrats! You have officially implementated on-premises Active Directory within Azure Virtual Machines!
