@@ -101,7 +101,7 @@ Join Client-1 to Your Domain (mydomain.com)
   17) From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
   18) From the Azure Portal, restart Client-1
   19) Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
-  - Right click start -> system -> rename this PC -> change -> domain -> mydomain.com -> mydomain.com\Jane_Admin, Password1 (Log back in with this info)
+  - Right click start -> system -> rename this PC (advanced) -> change -> domain -> mydomain.com -> mydomain.com\Jane_Admin, Password1 (Log back in with this info)
 
 Setup Remote Desktop for Non-Administrative Users on Client-1
 -
