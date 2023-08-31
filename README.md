@@ -68,8 +68,11 @@ Install Active Directory
 ![image](https://github.com/michaelpeters2/configure-ad/assets/141062110/49a535e6-53e3-4d42-b925-bbe703704e2a)
 </p>
   9) Promote this server to a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+  
     - Password: Password1
+    
     - Click next all the way to install
+    
   10) Restart and then log back into DC-1 as user: mydomain.com\labuser (May have to click "more options")
 
 ![image](https://github.com/michaelpeters2/configure-ad/assets/141062110/a15cbad4-693b-4702-aeba-9204a656243b)
